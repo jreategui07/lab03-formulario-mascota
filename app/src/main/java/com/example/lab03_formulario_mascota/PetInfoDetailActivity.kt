@@ -32,6 +32,18 @@ class PetInfoDetailActivity : AppCompatActivity() {
         tvHasLeptospiriosisVaccine.text = if(hasLeptospiriosisVaccine) "SI" else "NO"
         tvHasRabiaVaccine.text = if(hasRabiaVaccine) "SI" else "NO"
 
+        when(petType) {
+            "Perro" -> {
+                imgPetType.setImageResource(R.drawable.dog_icon)
+            }
+            "Gato" -> {
+                imgPetType.setImageResource(R.drawable.cat_icon)
+            }
+            "Conejo" -> {
+                imgPetType.setImageResource(R.drawable.rabbit_icon)
+            }
+        }
+
         println(petName)
         println(petAge)
         println(petType)

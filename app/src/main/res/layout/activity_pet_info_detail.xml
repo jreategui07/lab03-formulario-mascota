@@ -28,8 +28,8 @@
         android:text="[Nombre mascota]"
         android:textColor="#000000"
         android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/ivPetInfo"
-        app:layout_constraintTop_toTopOf="@+id/ivPetInfo" />
+        app:layout_constraintStart_toEndOf="@+id/imgPetType"
+        app:layout_constraintTop_toTopOf="@+id/imgPetType" />
 
     <TextView
         android:id="@+id/tvAgePetInfo"
@@ -38,17 +38,18 @@
         android:text="[Edad mascota]"
         android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/ivPetInfo"
+        app:layout_constraintBottom_toBottomOf="@+id/imgPetType"
         app:layout_constraintStart_toStartOf="@+id/tvNamePetInfo"
         app:layout_constraintTop_toBottomOf="@+id/tvNamePetInfo"
         app:layout_constraintVertical_bias="0.279" />
 
     <ImageView
-        android:id="@+id/ivPetInfo"
+        android:id="@+id/imgPetType"
         android:layout_width="133dp"
         android:layout_height="132dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="32dp"
+        android:src="@drawable/broken_image"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTitlePetInfo"
         tools:srcCompat="@tools:sample/avatars" />
@@ -64,7 +65,7 @@
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivPetInfo" />
+        app:layout_constraintTop_toBottomOf="@+id/imgPetType" />
 
     <TextView
         android:id="@+id/textView5"
