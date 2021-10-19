@@ -26,6 +26,12 @@ class PetInfoDetailActivity : AppCompatActivity() {
         tvNamePetInfo.text = petName
         tvAgePetInfo.text = petAge
 
+        tvHasPorvovirusVaccine.text = if(hasParvovirusVaccine) "SI" else "NO"
+        tvHasDistemperVaccine.text = if(hasDistemperVaccine) "SI" else "NO"
+        tvHasHepatitisVaccine.text = if(hasHepatitisVaccine) "SI" else "NO"
+        tvHasLeptospiriosisVaccine.text = if(hasLeptospiriosisVaccine) "SI" else "NO"
+        tvHasRabiaVaccine.text = if(hasRabiaVaccine) "SI" else "NO"
+
         println(petName)
         println(petAge)
         println(petType)
