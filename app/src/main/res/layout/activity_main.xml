@@ -57,7 +57,7 @@
         app:layout_constraintTop_toBottomOf="@+id/edtName" />
 
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/rbRadioGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
@@ -72,6 +72,7 @@
             android:id="@+id/rbDog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:checked="true"
             android:text="Perro" />
 
         <RadioButton
@@ -149,7 +150,7 @@
         android:textColor="#000000"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/rbRadioGroup" />
 
     <Button
         android:id="@+id/btnSend"
