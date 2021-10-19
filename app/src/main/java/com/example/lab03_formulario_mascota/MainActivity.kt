@@ -1,5 +1,6 @@
 package com.example.lab03_formulario_mascota
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -12,6 +13,7 @@ class MainActivity : AppCompatActivity() {
 
         btnSend.setOnClickListener {
 
+            // 1. Obtenemos valores del formulario
             val petName: String = edtName.text.toString()
             val petAge: String = edtAge.text.toString()
 
@@ -30,7 +32,7 @@ class MainActivity : AppCompatActivity() {
             val hasLeptospiriosisVaccine: Boolean = chkLeptospiriosis.isChecked
             val hasRabiaVaccine: Boolean = chkRabia.isChecked
 
-
+            // 2. Validamos campos requeridos
             if(petName.isEmpty()) {
                 toast("Debe ingresar el nombre de la mascota")
                 return@setOnClickListener
@@ -41,14 +43,23 @@ class MainActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            println(petName)
-            println(petAge)
-            println(petType)
-            println(hasParvovirusVaccine)
-            println(hasDistemperVaccine)
-            println(hasHepatitisVaccine)
-            println(hasLeptospiriosisVaccine)
-            println(hasRabiaVaccine)
+            // 3. Guardamos la información en una variable de tipo Bundle
+            val bundle: Bundle = Bundle().apply {
+                putString("KEY_PET_NAME", petName)
+                putString("KEY_PET_AGE", petAge)
+                putString("KEY_PET_TYPE", petType)
+                putBoolean("KEY_PET_HAS_PARVOVIRUS_VACCINE", hasParvovirusVaccine)
+                putBoolean("KEY_PET_HAS_DISTEMPER_VACCINE", hasDistemperVaccine)
+                putBoolean("KEY_PET_HAS_HEPATITIS_VACCINE", hasHepatitisVaccine)
+                putBoolean("KEY_PET_HAS_LEPTOSPIRIOSIS_VACCINE", hasLeptospiriosisVaccine)
+                putBoolean("KEY_PET_HAS_RABIA_VACCINE", hasRabiaVaccine)
+            }
+
+            // 4. Navegamos a la siguiente vista enviando el bundle
+            val intent = Intent(this, PetInfoDetailActivity::class.java).apply {
+                putExtras(bundle)
+            }
+            startActivity(intent)
 
         }
 
