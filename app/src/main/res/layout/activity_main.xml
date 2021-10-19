@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Registro de mascota"
@@ -18,10 +18,10 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.058" />
+        app:layout_constraintVertical_bias="0.04" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/edtName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
@@ -32,10 +32,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/edtAge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
@@ -46,7 +46,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/edtName" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -58,80 +58,80 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2">
+        app:layout_constraintTop_toBottomOf="@+id/edtAge">
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/rbDog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Perro" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/rbCat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Gato" />
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/rbRabbit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Conejo" />
     </RadioGroup>
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/chkParvovirus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="24dp"
         android:text="Parvovirus"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/tvVaccine" />
 
     <CheckBox
-        android:id="@+id/checkBox2"
+        android:id="@+id/chkDistemper"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:text="Distemper"
-        app:layout_constraintStart_toEndOf="@+id/checkBox"
-        app:layout_constraintTop_toTopOf="@+id/checkBox" />
+        app:layout_constraintStart_toEndOf="@+id/chkParvovirus"
+        app:layout_constraintTop_toTopOf="@+id/chkParvovirus" />
 
     <CheckBox
-        android:id="@+id/checkBox3"
+        android:id="@+id/chkHepatitis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:text="Hepatitis"
-        app:layout_constraintBottom_toBottomOf="@+id/checkBox2"
-        app:layout_constraintStart_toEndOf="@+id/checkBox2"
-        app:layout_constraintTop_toTopOf="@+id/checkBox2"
+        app:layout_constraintBottom_toBottomOf="@+id/chkDistemper"
+        app:layout_constraintStart_toEndOf="@+id/chkDistemper"
+        app:layout_constraintTop_toTopOf="@+id/chkDistemper"
         app:layout_constraintVertical_bias="0.0" />
 
     <CheckBox
-        android:id="@+id/checkBox4"
+        android:id="@+id/chkLeptospiriosis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="24dp"
         android:text="Leptospiriosis"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+        app:layout_constraintTop_toBottomOf="@+id/chkParvovirus" />
 
     <CheckBox
-        android:id="@+id/checkBox5"
+        android:id="@+id/chkRabia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:text="Rabia"
-        app:layout_constraintBottom_toBottomOf="@+id/checkBox4"
-        app:layout_constraintStart_toEndOf="@+id/checkBox4"
-        app:layout_constraintTop_toTopOf="@+id/checkBox4"
+        app:layout_constraintBottom_toBottomOf="@+id/chkLeptospiriosis"
+        app:layout_constraintStart_toEndOf="@+id/chkLeptospiriosis"
+        app:layout_constraintTop_toTopOf="@+id/chkLeptospiriosis"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvVaccine"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -143,13 +143,13 @@
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnSend"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="32dp"
         android:text="Enviar"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox5"
+        app:layout_constraintTop_toBottomOf="@+id/chkRabia"
         tools:layout_editor_absoluteX="20dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
