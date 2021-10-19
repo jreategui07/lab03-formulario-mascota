@@ -2,6 +2,7 @@ package com.example.lab03_formulario_mascota
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_pet_info_detail.*
 
 class PetInfoDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,6 +21,10 @@ class PetInfoDetailActivity : AppCompatActivity() {
         val hasHepatitisVaccine = bundle?.getBoolean("KEY_PET_HAS_HEPATITIS_VACCINE", false) ?: false
         val hasLeptospiriosisVaccine = bundle?.getBoolean("KEY_PET_HAS_LEPTOSPIRIOSIS_VACCINE", false) ?: false
         val hasRabiaVaccine = bundle?.getBoolean("KEY_PET_HAS_RABIA_VACCINE", false) ?: false
+
+        // 2. Asignamos valores a componentes de la vista
+        tvNamePetInfo.text = petName
+        tvAgePetInfo.text = petAge
 
         println(petName)
         println(petAge)
